@@ -2,7 +2,7 @@
   "name": "Momentum",
   "short_name": "Momentum",
   "description": "Rajesh's life-wide task and goals dashboard.",
-  "id": "./",
+  "id": "momentum-app",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
