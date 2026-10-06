@@ -1,7 +1,7 @@
 /* Momentum service worker: the app opens instantly and fully offline.
    Served from cache first; a fresh copy is fetched in the background whenever there is signal,
    so updates to the app arrive on the next launch. Task data never passes through here. */
-const CACHE = 'momentum-app-3.0.1';
+const CACHE = 'momentum-app-3.0.2';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './maskable-512.png', './apple-180.png'];
 self.addEventListener('install', e => {
   // Each file is cached on its own, so one missing file can never stop the app from working offline.
