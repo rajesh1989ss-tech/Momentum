@@ -895,7 +895,7 @@ const PRISTINE = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
 const STORE_KEY = 'momentum-state';
 const BACKUP_PREFIX = 'momentum-backup-';
 const SCHEMA_VERSION = 2;
-const APP_VERSION = '3.0';
+const APP_VERSION = '3.0.1';
 const doc = document, root = doc.documentElement;
 const $ = (s, r = doc) => r.querySelector(s);
 const $$ = (s, r = doc) => Array.from(r.querySelectorAll(s));
@@ -2401,7 +2401,7 @@ function openSync() {
 function initPWA() {
   if (!/^https?:$/.test(location.protocol)) return;
   const add = (rel, href) => { const l = doc.createElement('link'); l.rel = rel; l.href = href; doc.head.appendChild(l); };
-  add('manifest', 'manifest.webmanifest'); add('apple-touch-icon', 'icons/apple-180.png');
+  add('manifest', 'manifest.webmanifest'); add('apple-touch-icon', 'apple-180.png');
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
   try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
 }
